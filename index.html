@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230104010459">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230111175541">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
+		<header data-scroll="200" data-scroll-show class="header"> <!--  data-scroll = "121" - подключение классов после 121 пикселей скролла -->
 			<div class="header__container header__container_wide">
 
 				<div class="header__column header__column_logo"><a href="#" class="header__logo">Gerícht</a></div>
@@ -48,10 +48,6 @@
 		<main class="mainpage">
 			<section data-fullscreen class="mainpage__slider main-slider"><!-- Дата-атрибут "data-fullscreen" образует блок-фулскрин не зависимо от высоты устройства ("растягивает" блок на всю высоту вьюпорта устройства) -->
 				<div class="main-slider__container main-slider__container_wide">
-					<nav class="main-slider__menu menu-main-slider">
-						<a href="" class="menu-main-slider__link menu-main-slider__link_current">#Gericht</a>
-						<a href="" class="menu-main-slider__link">#Bar</a>
-					</nav>
 					<div class="main-slider__container body-main-slider">
 						<div class="body-main-slider__swiper">
 							<div class="body-main-slider__slide slide-main-slider">
@@ -96,13 +92,80 @@
 						</div>
 						<div class="body-main-slider__controll"></div>
 					</div>
-					<button data-da=".body-main-slider,1445,last" type="button" class="main-slider__scroll scroll">Scroll</button>
+					<nav class="main-slider__menu menu-main-slider">
+						<a href="" class="menu-main-slider__link menu-main-slider__link_current">#Gericht</a>
+						<a href="" class="menu-main-slider__link">#Bar</a>
+					</nav>
+					<button data-goto="about-section" data-goto-header data-da=".body-main-slider,1445,last" type="button" class="main-slider__scroll scroll">Scroll</button>
 				</div>
 			</section>
+			<div class="mainpage__body">
+				<section id="about-section" data-bg class="mainpage__about about-section">
+					<div class="about-section__container">
+						<div class="about-section__content">
+							<h3 class="about-section__title">About us</h3>
+							<div class="about-section__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, voluptas? Mollitia unde, cum aspernatur hic sit eum eius similique suscipit temporibus dignissimos nisi, minima voluptatibus a exercitationem animi alias commodi.</div>
+							<a href="" class="about-sectiom__button button">Know more</a>
+						</div>
+						<div class="about-section__knife">
+							<img src="img/about/knife.svg" alt="knife">
+						</div>
+						<div class="about-section__content">
+							<h3 class="about-section__title">Our history</h3>
+							<div class="about-section__text">Facere, nemo natus nesciunt, architecto in debitis laudantium, ad necessitatibus expedita hic iusto sit. Praesentium distinctio dolorum quasi corporis enim nisi ratione ex libero placeat architecto quia adipisci laboriosam commodi impedit, nesciunt esse.</div>
+							<a href="" class="about-sectiom__button button">Know more</a>
+						</div>
+					</div>
+				</section>
+				<section class="book">
+					<div class="book__container">
+						<div class="book__body">
+							<div class="book__header block-header">
+								<div class="block-header__sub-title">Reservations</div>
+								<h2 class="block-header__title">Book a table</h2>
+							</div>
+							<form action="#" class="book__form form-book">
+								<div class="form-book__lines">
+									<div class="form-book__line">
+										<select name="form[]" data-class-modif="form">
+											<option value="1" selected>1 Person</option>
+											<option value="2">2 Person</option>
+											<option value="3">3 Person</option>
+											<option value="4">4 Person</option>
+										</select>
+									</div>
+									<div class="form-book__line">
+										<select name="form[]" data-class-modif="form">
+											<option value="1" selected>1 Person</option>
+											<option value="2">2 Person</option>
+											<option value="3">3 Person</option>
+											<option value="4">4 Person</option>
+										</select>
+									</div>
+									<div class="form-book__line">
+										<select data-scroll name="form[]" data-class-modif="form">
+											<option value="1" selected>11:00 AM</option>
+											<option value="2">12:00 AM</option>
+											<option value="3">1:00 PM</option>
+											<option value="4">2:00 PM</option>
+											<option value="4">3:00 PM</option>
+											<option value="4">4:00 PM</option>
+											<option value="4">5:00 PM</option>
+											<option value="4">6:00 PM</option>
+										</select>
+									</div>
+								</div>
+								<button type="submit" class="book__button button">Book now</button>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-			</div>
+
 		</footer>
 	</div>
 	<!-- <div id="popup" aria-hidden="true" class="popup">
@@ -115,7 +178,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230104010459"></script>
+	<script src="js/app.min.js?_v=20230111175541"></script>
 </body>
 
 </html>
